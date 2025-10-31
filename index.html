@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+   
+    <style>@import url(https://fonts.bunny.net/css?family=ibm-plex-sans:400,600);</style>
+
+    <link rel="icon" href="  https://www.in20abitare.it/wp-content/uploads/2023/04/in20-favicon.svg" sizes="any">
+    <link rel="icon" href="  https://www.in20abitare.it/wp-content/uploads/2023/04/in20-favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="https://www.in20abitare.it/wp-content/uploads/2023/04/in20-favicon.svg">
+ 
+    
+    <!-- UIkit  -->
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/css/uikit.min.css"
+    />
+    
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit-icons.min.js"></script>
+    <!-- Canvas  -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+    <noscript>
+      <style>
+        /**
+          * Reinstate scrolling for non-JS clients
+          */
+        .simplebar-content-wrapper {
+          overflow: auto;
+        }
+      </style>
+    </noscript>
+    <title>Living Gioca</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="logo">
+        <img src="LOGO.svg" alt="logo" />
+      </div>
+      <h1 class="titolo">LIVING</h1>
+      <p class="descrizione">
+        <span style="font-weight:bold;">Componi il tuo design. </span> Trascina i vari complementi d’arredo all’interno
+        della moodboard. Organizzali all’interno del riquadro per creare la tua
+        inspiration ideale. Quando hai finito scarica l’immagine premendo sul
+        tasto Download. Ti aspettiamo in shoowroom per discuterne insieme.
+      </p>
+      <!-- <div class="popup" onclick="myFunction()"><a href="#" uk-icon="info" class="icon" ratio="1.8"></a>
+            <span class="popuptext" id="myPopup">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+          </div>  -->
+
+      <div class="indietrodesk">
+        <a class="indietrodesk" href="https://www.in20abitare.it/componi-il-tuo-design/"
+          ><span
+            uk-icon="icon: arrow-left; width: 40; height: 40;"
+            class="uk-icon"
+          ></a>
+        <p class="indietro-desk">Torna indietro</p>
+      </div>
+    </header>
+
+    <div class="container-game">
+      <div class="col-1-2 wrapper-category">
+        <div uk-slider="draggable: false; " tabindex="-1" class="alto-category">
+          <div class="uk-position-relative">
+            <div class="uk-slider-container">
+              <ul class="uk-slider-items">
+                <li>
+                  <div id="alto-1" class="alto-1">
+                    <div id="mydiv" class="alto-1">                      
+                      <div id="alto" class="alto">
+                         <!-- @sviluppo le immagini relative ai prodotti vanno inserite con classe drag-item 
+                            per garantire il funzionamento  della slide come di seguito-->
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\01 alti\in20_living_alti_01.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="alto-2" class="alto-2">
+                    <div id="mydiv" class="alto-2">
+                      <div class="alto">
+                          <!-- @sviluppo le immagini relative ai prodotti vanno inserite con classe drag-item 
+                            per garantire il funzionamento  della slide come di seguito-->
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\01 alti\in20_living_alti_02.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="alto-3">
+                    <div id="mydiv" class="alto-3">
+                      
+                      <div class="alto">
+                          <!-- @sviluppo le immagini relative ai prodotti vanno inserite con classe drag-item 
+                            per garantire il funzionamento  della slide come di seguito-->
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\01 alti\in20_living_alti_03.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="alto-4">
+                    <div id="mydiv" class="alto-4">
+                      <div class="alto">  <img
+                        class="drag-item"
+                        src="prodotti\In20_Living_Camera da letto_Bagno\Living\01 alti\in20_living_alti_04.png"
+                      /></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="alto-5">
+                    <div id="mydiv" class="alto-5">
+                      <div class="alto"><img
+                        class="drag-item"
+                        src="prodotti\In20_Living_Camera da letto_Bagno\Living\01 alti\in20_living_alti_05.png"
+                      />
+                    </div>
+                  </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="alto-6">
+                     <!-- @sviluppo drag-item per garantire il funzionamento della slide la classe drag-item fa total dal div-->
+                    <div id="mydiv" class="alto-6">
+                      <div class="alto"><img
+                        class="drag-item"
+                        src="prodotti\In20_Living_Camera da letto_Bagno\Living\01 alti\in20_living_alti_06.png"
+                      /></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="alto-7">
+                    <div id="mydiv" class="alto-7">
+                      <div class="alto"><img
+                        class="drag-item"
+                        src="prodotti\In20_Living_Camera da letto_Bagno\Living\01 alti\in20_living_alti_07.png"
+                      /></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="alto-8">
+                    <div id="mydiv" class="alto-8">
+                      <div class="alto"><img
+                        class="drag-item"
+                        src="prodotti\In20_Living_Camera da letto_Bagno\Living\01 alti\in20_living_alti_08.png"
+                      /></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="alto-9">
+                    <div id="mydiv" class="alto-9">
+                      <div class="alto"><img
+                        class="drag-item"
+                        src="prodotti\In20_Living_Camera da letto_Bagno\Living\01 alti\in20_living_alti_09.png"
+                      /></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="alto-10">
+                    <div id="mydiv" class="alto-10">
+                      <div class="alto"><img
+                        class="drag-item"
+                        src="prodotti\In20_Living_Camera da letto_Bagno\Living\01 alti\in20_living_alti_10.png"
+                      /></div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <a
+              class="uk-position-center-left-out"
+              href="#"
+              uk-slider-item="previous"
+              ><span uk-icon="chevron-left"></span
+            ></a>
+            <a
+              class="uk-position-center-right-out"
+              href="#"
+              uk-slider-item="next"
+              ><span uk-icon="chevron-right"></span
+            ></a>
+          </div>
+
+          <ul class="uk-slider-nav uk-dotnav"></ul>
+        </div>
+
+        <div uk-slider="draggable: false" class="medio-category">
+          <div class="uk-position-relative">
+            <div class="uk-slider-container">
+              <ul class="uk-slider-items">
+                <li>
+                  
+  <div id="medio-1">
+    <div id="mydiv" class="medio-1">
+      <div class="medio">
+        <img
+          class="drag-item"
+          src="prodotti\In20_Living_Camera da letto_Bagno\Living\02 medi\in20_living_medi_01.png"
+        />
+      </div>
+    </div>
+  </div>
+</li>
+<li>
+  <div id="medio-2">
+    <div id="mydiv" class="medio-2">
+      <div class="medio">
+        <img
+          class="drag-item"
+          src="prodotti\In20_Living_Camera da letto_Bagno\Living\02 medi\in20_living_medi_02.png"
+        />
+      </div>
+    </div>
+  </div>
+</li>
+<li>
+  <div id="medio-3">
+    <div id="mydiv" class="medio-3">
+      <div class="medio">
+        <img
+          class="drag-item"
+          src="prodotti\In20_Living_Camera da letto_Bagno\Living\02 medi\in20_living_medi_03.png"
+        />
+      </div>
+    </div>
+  </div>
+</li>
+<li>
+  <div id="medio-4">
+    <div id="mydiv" class="medio-4">
+      <div class="medio">
+        <img
+          class="drag-item"
+          src="prodotti\In20_Living_Camera da letto_Bagno\Living\02 medi\in20_living_medi_04.png"
+        />
+      </div>
+    </div>
+  </div>
+</li>
+<li>
+  <div id="medio-5">
+    <div id="mydiv" class="medio-5">
+      <div class="medio">
+        <img
+          class="drag-item"
+          src="prodotti\In20_Living_Camera da letto_Bagno\Living\02 medi\in20_living_medi_05.png"
+        />
+      </div>
+    </div>
+  </div>
+</li>
+<li>
+  <div id="medio-6">
+    <div id="mydiv" class="medio-6">
+      <div class="medio">
+        <img
+          class="drag-item"
+          src="prodotti\In20_Living_Camera da letto_Bagno\Living\02 medi\in20_living_medi_06.png"
+        />
+      </div>
+    </div>
+  </div>
+</li>
+<li>
+  <div id="medio-7">
+    <div id="mydiv" class="medio-7">
+      <div class="medio">
+        <img
+          class="drag-item"
+          src="prodotti\In20_Living_Camera da letto_Bagno\Living\02 medi\in20_living_medi_07.png"
+        />
+      </div>
+    </div>
+  </div>
+</li>
+<li>
+  <div id="medio-8">
+    <div id="mydiv" class="medio-8">
+      <div class="medio">
+        <img
+          class="drag-item"
+          src="prodotti\In20_Living_Camera da letto_Bagno\Living\02 medi\in20_living_medi_08.png"
+        />
+      </div>
+    </div>
+  </div>
+</li>
+<li>
+  <div id="medio-9">
+    <div id="mydiv" class="medio-9">
+      <div class="medio">
+        <img
+          class="drag-item"
+          src="prodotti\In20_Living_Camera da letto_Bagno\Living\02 medi\in20_living_medi_09.png"
+        />
+      </div>
+    </div>
+  </div>
+</li>
+<li>
+  <div id="medio-10">
+    <div id="mydiv" class="medio-10">
+      <div class="medio">
+        <img
+          class="drag-item"
+          src="prodotti\In20_Living_Camera da letto_Bagno\Living\02 medi\in20_living_medi_10.png"
+        />
+      </div>
+    </div>
+  </div>
+
+                </li>
+              </ul>
+            </div>
+
+            <a
+              class="uk-position-center-left-out"
+              href="#"
+              uk-slider-item="previous"
+              ><span uk-icon="chevron-left"></span
+            ></a>
+            <a
+              class="uk-position-center-right-out"
+              href="#"
+              uk-slider-item="next"
+              ><span uk-icon="chevron-right"></span
+            ></a>
+          </div>
+
+          <ul class="uk-slider-nav uk-dotnav"></ul>
+        </div>
+
+        <div uk-slider="draggable: false" class="sedia-category">
+          <div class="uk-position-relative">
+            <div class="uk-slider-container">
+              <ul class="uk-slider-items">
+                <li>
+                 
+                  <div id="mediobasso-1">
+                    <div id="mydiv" class="mediobasso-1">
+                      <div class="mediobasso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\03 medi bassi\in20_living_medibassi_01.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  </li>
+                  <li>
+                  <div id="mediobasso-2">
+                    <div id="mydiv" class="mediobasso-2">
+                      <div class="mediobasso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\03 medi bassi\in20_living_medibassi_02.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  </li>
+                  <li>
+                  <div id="mediobasso-3">
+                    <div id="mydiv" class="mediobasso-3">
+                      <div class="mediobasso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\03 medi bassi\in20_living_medibassi_03.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  </li>
+                  <li>
+                  <div id="mediobasso-4">
+                    <div id="mydiv" class="mediobasso-4">
+                      <div class="mediobasso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\03 medi bassi\in20_living_medibassi_04.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  </li>
+                  <li>
+                  <div id="mediobasso-5">
+                    <div id="mydiv" class="mediobasso-5">
+                      <div class="mediobasso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\03 medi bassi\in20_living_medibassi_05.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  </li>
+                  <li>
+                  <div id="mediobasso-6">
+                    <div id="mydiv" class="mediobasso-6">
+                      <div class="mediobasso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\03 medi bassi\in20_living_medibassi_06.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  </li>
+                  <li>
+                  <div id="mediobasso-7">
+                    <div id="mydiv" class="mediobasso-7">
+                      <div class="mediobasso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\03 medi bassi\in20_living_medibassi_07.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  </li>
+                  <li>
+                  <div id="mediobasso-8">
+                    <div id="mydiv" class="mediobasso-8">
+                      <div class="mediobasso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\03 medi bassi\in20_living_medibassi_08.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  </li>
+                  <li>
+                  <div id="mediobasso-9">
+                    <div id="mydiv" class="mediobasso-9">
+                      <div class="mediobasso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\03 medi bassi\in20_living_medibassi_09.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  </li>
+                  <li>
+                  <div id="mediobasso-10">
+                    <div id="mydiv" class="mediobasso-10">
+                      <div class="mediobasso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\03 medi bassi\in20_living_medibassi_10.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+
+                </li>
+              </ul>
+            </div>
+
+            <a
+              class="uk-position-center-left-out"
+              href="#"
+              uk-slider-item="previous"
+              ><span uk-icon="chevron-left"></span
+            ></a>
+            <a
+              class="uk-position-center-right-out"
+              href="#"
+              uk-slider-item="next"
+              ><span uk-icon="chevron-right"></span
+            ></a>
+          </div>
+
+          <ul class="uk-slider-nav uk-dotnav"></ul>
+        </div>
+
+        <div uk-slider="draggable: false" class="basso-category">
+          <div class="uk-position-relative">
+            <div class="uk-slider-container">
+              <ul class="uk-slider-items">
+                <li>
+                  
+                  <div id="basso-1">
+                    <div id="mydiv" class="basso-1 ">
+                      <div class="basso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\04 bassi\in20_living_bassi_01.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="basso-2">
+                    <div id="mydiv" class="basso-2 ">
+                      <div class="basso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\04 bassi\in20_living_bassi_02.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="basso-3">
+                    <div id="mydiv" class="basso-3 ">
+                      <div class="basso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\04 bassi\in20_living_bassi_03.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="basso-4">
+                    <div id="mydiv" class="basso-4 ">
+                      <div class="basso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\04 bassi\in20_living_bassi_04.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="basso-5">
+                    <div id="mydiv" class="basso-5 ">
+                      <div class="basso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\04 bassi\in20_living_bassi_05.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="basso-6">
+                    <div id="mydiv" class="basso-6 ">
+                      <div class="basso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\04 bassi\in20_living_bassi_06.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="basso-7">
+                    <div id="mydiv" class="basso-7 ">
+                      <div class="basso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\04 bassi\in20_living_bassi_07.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="basso-8">
+                    <div id="mydiv" class="basso-8 ">
+                      <div class="basso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\04 bassi\in20_living_bassi_08.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="basso-10">
+                    <div id="mydiv" class="basso-9 ">
+                      <div class="basso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\04 bassi\in20_living_bassi_09.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="basso-10">
+                    <div id="mydiv" class="basso-10 ">
+                      <div class="basso">
+                        <img
+                          class="drag-item"
+                          src="prodotti\In20_Living_Camera da letto_Bagno\Living\04 bassi\in20_living_bassi_10.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                
+
+
+                </li>
+              </ul>
+            </div>
+
+            <a
+              class="uk-position-center-left-out"
+              href="#"
+              uk-slider-item="previous"
+              ><span uk-icon="chevron-left"></span
+            ></a>
+            <a
+              class="uk-position-center-right-out"
+              href="#"
+              uk-slider-item="next"
+              ><span uk-icon="chevron-right"></span
+            ></a>
+          </div>
+
+          <ul class="uk-slider-nav uk-dotnav"></ul>
+        </div>
+
+        <div uk-slider="draggable: false" class="basso-category">
+          <div class="uk-position-relative">
+            <div class="uk-slider-container">
+              <ul class="uk-slider-items">
+                <li>
+                  <div id="palette-1">
+                    <div id="mydiv" class="palette-1">
+                      <div class="palette"><img
+                        class="drag-item"
+                        src="prodotti\In20_Living_Camera da letto_Bagno\Bagno\palette\IN20 PALETTE 1.png"
+                      /></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="palette-2">
+                    <div id="mydiv" class="palette-2">
+                      <div class="palette"><img
+                        class="drag-item"
+                        src="prodotti\In20_Living_Camera da letto_Bagno\Bagno\palette\IN20 PALETTE 2.png"
+                      /></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="palette-3">
+                    <div id="mydiv" class="palette-3">
+                      <div class="palette"><img
+                        class="drag-item"
+                        src="prodotti\In20_Living_Camera da letto_Bagno\Bagno\palette\IN20 PALETTE 3.png"
+                      /></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="palette-4">
+                    <div id="mydiv" class="palette-4">
+                      <div class="palette"><img
+                        class="drag-item"
+                        src="prodotti\In20_Living_Camera da letto_Bagno\Bagno\palette\IN20 PALETTE 4.png"
+                      /></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="palette-5">
+                    <div id="mydiv" class="palette-5">
+                      <div class="palette"><img
+                        class="drag-item"
+                        src="prodotti\In20_Living_Camera da letto_Bagno\Bagno\palette\IN20 PALETTE 5.png"
+                      /></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="palette-6">
+                    <div id="mydiv" class="palette-6">
+                      <div class="palette"><img
+                        class="drag-item"
+                        src="prodotti\In20_Living_Camera da letto_Bagno\Bagno\palette\IN20 PALETTE 6.png"
+                      /></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="palette-7">
+                    <div id="mydiv" class="palette-7">
+                      <div class="palette"><img
+                        class="drag-item"
+                        src="prodotti\In20_Living_Camera da letto_Bagno\Bagno\palette\IN20 PALETTE 7.png"
+                      /></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="palette-8">
+                    <div id="mydiv" class="palette-8">
+                      <div class="palette"><img
+                        class="drag-item"
+                        src="prodotti\In20_Living_Camera da letto_Bagno\Bagno\palette\IN20 PALETTE 8.png"
+                      /></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="palette-9">
+                    <div id="mydiv" class="palette-9">
+                      <div class="palette"><img
+                        class="drag-item"
+                        src="prodotti\In20_Living_Camera da letto_Bagno\Bagno\palette\IN20 PALETTE 9.png"
+                      /></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div id="palette-10">
+                    <div id="mydiv" class="palette-10">
+                      <div class="palette"><img
+                        class="drag-item"
+                        src="prodotti\In20_Living_Camera da letto_Bagno\Bagno\palette\IN20 PALETTE 10.png"
+                      /></div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <a
+              class="uk-position-center-left-out"
+              href="#"
+              uk-slider-item="previous"
+              ><span uk-icon="chevron-left"></span
+            ></a>
+            <a
+              class="uk-position-center-right-out"
+              href="#"
+              uk-slider-item="next"
+              ><span uk-icon="chevron-right"></span
+            ></a>
+          </div>
+
+          <ul class="uk-slider-nav uk-dotnav"></ul>
+        </div>
+      </div>
+      <div class="col-1-2">
+        <div
+          id="drag-label"
+          style="
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            pointer-events: none;
+          "
+        ></div>
+        <div id="moodboard">
+          <p id="descrizione_mobile" class="descrizione_mobile">
+            <span style="font-weight:bold;">Componi il tuo design. </span> Trascina i vari complementi d’arredo all’interno
+        della moodboard. Organizzali all’interno del riquadro per creare la tua
+        inspiration ideale. Quando hai finito scarica l’immagine premendo sul
+        tasto Download. Ti aspettiamo in shoowroom per discuterne insieme.
+          </p>
+        </div>
+        <div id="download-moodboard">          
+          <div id="email-form" >
+          
+                <div class="_form-content">                  
+                   
+                   
+                  
+                     
+                 
+                  <div class="_button-wrapper">
+                    <button id="_form_3_submit" class="_submit" type="submit" >
+                      Download
+                    </button></div>
+                  
+                    
+                  
+                  <div class="_clear-element">
+                  </div>
+                  
+                  <div id="ricomincia-moodboard_wrapper"> 
+                  <button
+                  id="ricomincia-moodboard"
+                  type="button"
+                  class="_submit"            
+                  data-wrapper-class="custom-btn"
+                  data-corners="false"
+                  onclick="refresh()">Ricomincia</button>  
+                </div>
+                  <div class="_field-wrapper">  </div>               
+                
+                </div>
+                <div class="_form-thank-you" style="display:none;">
+                </div>
+              </form>
+            </div>
+            
+           
+         
+        
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+    <script>
+     
+      
+
+     
+      
+    </script><script src="script.js"></script>
+ 
+    
+     
+    
+  </body>
+</html>

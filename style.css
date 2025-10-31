@@ -1,0 +1,966 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inconsolata", Tahoma, Geneva, Verdana, sans-serif;
+
+  /* touch-action: none; */
+}
+
+body {
+  margin: 0;
+  background-color: #1d1d1d;
+  height: 100vh;
+}
+
+header {
+  background-color: #1d1d1d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 10px 20px 20px 20px;
+}
+
+/* rimuove il margine per paragrafi di uikit margin:0 0 20px 0; */
+address,
+dl,
+fieldset,
+figure,
+ol,
+fieldset p,
+pre,
+ul {
+  margin: 0 0 0 0 !important;
+}
+
+* + address,
+* + dl,
+* + fieldset,
+* + figure,
+* + ol,
+* + p,
+* + pre,
+* + ul {
+  margin: 0 0 0 0 !important;
+}
+/*frecce per slider*/
+a:link,
+a:active,
+.uk-link:hover,
+a:hover {
+  color: #fff8f1;
+}
+.uk-h1,
+h1 {
+  font-size: 2.23125rem;
+  line-height: 1.2;
+  margin: 0px !important;
+}
+
+.uk-position-relative {
+  position: relative !important;
+  margin-top: 10px;
+}
+.descrizione_mobile {
+  display: none;
+}
+
+.indietrodesk {
+  align-self: end;
+
+  color: #fff8f1;
+  font-size: 13px;
+  transition: all 0.3s ease-in-out;
+}
+.uk-link-toggle:hover .uk-link,
+.uk-link:hover,
+a:hover {
+  color: #5c5c5c !important;
+}
+
+/*
+
+.popup {
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  top: 60px;
+  left: 50%;
+	}
+
+.icon {animation: bounce2 2s ease infinite;}
+
+@keyframes bounce2 {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 360px;
+  background-color: #fff8f1;
+  color: #1d1d1d;
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px;
+  position: absolute;
+  z-index: 1;
+	right: 50px;
+  bottom: 75px;
+  font-family: helvetica;
+  font-weight: 100;
+	}
+
+.popup .popuptext::after {
+ 	position: absolute;
+  top: 100%;
+  left: 50%;
+  border-color: #fff8f1;
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+
+
+titolo bagno */
+
+#logo {
+  height: 100px;
+  min-width: 100px;
+
+  display: flex;
+  align-content: center;
+  object-fit: cover;
+}
+.titolo {
+  font-size: 80px;
+  font-family: helvetica;
+  font-weight: 100;
+  color: #fff8f1;
+
+  justify-content: left;
+}
+
+.descrizione {
+  font-size: 15px;
+
+  font-weight: 100 !important;
+  width: 45%;
+  font-family: helvetica;
+  color: #fff8f1;
+  text-align: justify;
+
+  left: 20px !important;
+  right: 10px !important;
+  line-height: 20px;
+  top: 5px !important;
+}
+
+/*intera colonna moodboard*/
+.container-game {
+  height: calc(100% - 150px);
+  width: 100%;
+  background-color: #1d1d1d;
+  display: flex;
+}
+
+.col-1-2 {
+  width: 50%;
+  padding: 20px;
+  padding-top: 0px;
+  margin-bottom: 40px;
+}
+
+.wrapper-category {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 0px;
+}
+
+.wrapper-category::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+.wrapper-category::-webkit-scrollbar-thumb {
+  background: #fff8f1;
+  border-radius: 10px;
+}
+.wrapper-category::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.uk-dotnav {
+}
+
+#moodboard {
+  height: 100%;
+  margin-bottom: 5px;
+  border: 1px solid #fff8f1;
+  background-color: #fff8f1;
+  z-index: 1;
+  border-radius: 15px;
+  position: relative;
+  background-image: url("./logo2.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+#download-moodboard {
+  width: 100%;
+  background: transparent;
+}
+
+._form-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+._submit {
+  background-color: #1d1d1d;
+  border: 1px solid #fff8f1;
+
+  font-family: helvetica;
+  font-size: 14px;
+  padding: 10px !important;
+  color: #fff8f1;
+  position: relative;
+  border-radius: 25px;
+  font-family: helvetica;
+  font-weight: 100;
+  font-size: 13px;
+}
+
+._button-wrapper {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+}
+
+#_form_3_submit {
+  width: 100%;
+}
+
+#_form_3_submit:hover {
+  text-decoration: none;
+  background-color: #fff8f1;
+  color: #1d1d1d;
+  border: 1px solid #d5d5d5;
+}
+.submit:hover {
+  text-decoration: none;
+  background-color: #fff8f1;
+  color: #1d1d1d;
+  border: 1px solid #d5d5d5;
+}
+
+#ricomincia-moodboard_wrapper {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 5%;
+}
+
+#ricomincia-moodboard {
+  text-decoration: none;
+  background-color: #1d1d1d;
+  color: #fff8f1;
+  width: 100%;
+}
+
+#ricomincia-moodboard:hover {
+  text-decoration: none;
+  background-color: #fff8f1;
+  color: #1d1d1d;
+  border: 1px solid #d5d5d5;
+}
+
+#email {
+  width: 45%;
+  top: 0 !important;
+  left: 0;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: helvetica !important;
+  border: 1px solid #fff8f1 !important;
+  text-align: center;
+  border-radius: 25px !important;
+  font-weight: 100 !important;
+  padding: 10px 5px !important;
+  color: #faf9f1;
+}
+
+._error-inner {
+  font-size: small;
+}
+.drag-item {
+  /* */
+
+  position: relative;
+  z-index: 999;
+  text-align: center;
+  height: 120px;
+  width: 100px;
+  font-size: 18px;
+}
+
+.wrapper-category img {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  height: 200px;
+  width: 150px;
+  font-size: 18px;
+}
+.col-1-2.wrapper-category svg {
+  width: 35px;
+  transition: all 0.3s ease-in-out;
+}
+
+.col-1-2.wrapper-category svg:hover {
+  width: 38px;
+  color: #5c5c5c !important;
+}
+.alto {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medio {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mediobasso {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.basso {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.palette {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uk-slider-items li {
+  min-width: 200px;
+  min-height: 200px;
+  margin: 0 2.5px 0 2.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282828;
+}
+
+.uk-slider-items li:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 30px 30px #1d1d1d);
+  z-index: 10000;
+}
+
+.uk-slider-container {
+  margin-bottom: 10px;
+}
+
+/* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+.slider {
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.sedia.mydivheader {
+  background-color: #f32121c9;
+}
+._error-inner {
+  font-size: small;
+  color: white;
+  position: relative;
+}
+@media screen and (max-width: 960px) {
+  body {
+    height: 100%;
+  }
+
+  .descrizione {
+    display: none;
+  }
+  .descrizione_mobile {
+    display: block;
+    font-size: 15px;
+    padding: 40px;
+    color: #666;
+    text-align: justify;
+  }
+
+  .indietrodesk {
+    align-self: end;
+    margin-bottom: 10px;
+    margin-right: 20px;
+  }
+
+  .container-game {
+    flex-wrap: wrap;
+  }
+
+  .col-1-2 {
+    width: 100%;
+    order: 0;
+    height: 450px;
+  }
+
+  .col-1-2.wrapper-category {
+    order: 1;
+    height: 600px;
+    padding: 20px;
+    padding-top: 0px;
+    width: 95%;
+    margin-top: 0px;
+  }
+  .col-1-2.wrapper-category svg {
+    width: 30px;
+  }
+
+  .wrapper-category::-webkit-scrollbar {
+    width: 15px;
+    height: 5px;
+  }
+  .wrapper-category::-webkit-scrollbar-thumb {
+    background: #fff8f1;
+    border-radius: 8px;
+  }
+  .wrapper-category::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  #ricomincia-moodboard_wrapper {
+    margin-left: 5%;
+  }
+}
+/* per fare funzionare al meglio la scrollbar da mobile è impostato il valore su 110% */
+@media screen and (max-width: 576px) {
+  body {
+    height: 100%;
+  }
+
+  header {
+    align-items: flex-start;
+  }
+
+  .descrizione {
+    display: none;
+  }
+
+  .titolo {
+    font-size: 50px;
+  }
+  #logo {
+    height: 50px;
+  }
+
+  .indietrodesk {
+    align-self: end;
+    margin-bottom: 10px;
+    margin-right: 0;
+    font-size: 13px;
+  }
+
+  .indietrodesk svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .col-1-2 {
+    width: 100%;
+    order: 0;
+    height: 280px;
+    background-color: #1d1d1d;
+  }
+
+  .col-1-2.wrapper-category {
+    order: 1;
+    margin-top: 65px;
+    padding: 20px;
+    padding-top: 0px;
+    padding-right: 45px;
+    height: 350px;
+    /* per fare funzionare al meglio la scrollbar da mobile è impostato il valore su 110% */
+    width: 110%;
+  }
+
+  #moodboard {
+    height: 300px;
+    width: 100%;
+  }
+
+  .descrizione_mobile {
+    display: block;
+    font-size: 15px;
+    padding: 40px;
+    color: #666;
+    text-align: justify;
+  }
+
+  #email {
+    margin-bottom: 5px;
+    font-size: 10px;
+    width: 100%;
+  }
+  #ricomincia-moodboard_wrapper {
+    width: 50%;
+    display: flex;
+    margin-left: auto;
+  }
+
+  #ricomincia-moodboard {
+    font-size: 10px;
+    width: 90%;
+  }
+  ._button-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #_form_3_submit {
+    width: 90%;
+  }
+
+  ._submit {
+    font-size: 10px;
+  }
+
+  .wrapper-category::-webkit-scrollbar {
+    width: 20px;
+    height: 15px;
+  }
+  .wrapper-category::-webkit-scrollbar-thumb {
+    background: #fff8f1;
+    border-radius: 8px;
+  }
+  .wrapper-category::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+/* Styles for canvas element container and remove button */
+.canvas-element-container {
+  position: absolute !important;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  cursor: move;
+  box-sizing: border-box !important;
+}
+
+.canvas-element-container.ui-draggable-dragging {
+  z-index: 10001 !important;
+}
+
+.canvas-element-container img {
+  display: block !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+/* Ensure dropped elements are visible */
+.canvas-element-container > div {
+  position: relative;
+  display: block;
+}
+
+.canvas-element-container > div img {
+  display: block !important;
+}
+
+.remove-button {
+  position: absolute !important;
+  top: -15px !important;
+  right: -15px !important;
+  width: 15px !important;
+  height: 15px !important;
+  background-color: #ff4444 !important;
+  color: white !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  z-index: 10003 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  transition: background-color 0.2s ease !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.remove-button:hover {
+  background-color: #cc0000;
+}
+
+.remove-button:active {
+  transform: scale(0.95);
+}
+
+/* Prevent remove button from interfering with drag */
+.remove-button {
+  pointer-events: auto !important;
+}
+
+.canvas-element-container.ui-draggable-dragging .remove-button {
+  pointer-events: none !important;
+}
+
+/* Enhanced jQuery UI Draggable Styles */
+.ui-draggable {
+  transition: opacity 0.2s ease;
+}
+
+/* Resizable handle styles */
+.ui-resizable-handle {
+  background-color: transparent !important;
+  border: none !important;
+  opacity: 0.9 !important;
+  transition: opacity 0.2s ease !important;
+  position: absolute !important;
+  z-index: 10002 !important;
+}
+
+/* Arrow hover effect will be handled per handle type */
+
+/* Corner handles - Diagonal arrows */
+.ui-resizable-nw,
+.ui-resizable-ne,
+.ui-resizable-sw,
+.ui-resizable-se {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+/* Ensure SE handle is properly positioned at bottom-right */
+.ui-resizable-se {
+  right: -3px !important;
+  bottom: -3px !important;
+}
+
+/* Ensure SW handle is properly positioned at bottom-left */
+.ui-resizable-sw {
+  left: -3px !important;
+  bottom: -3px !important;
+}
+
+/* Ensure NW handle is properly positioned at top-left */
+.ui-resizable-nw {
+  left: -3px !important;
+  top: -3px !important;
+}
+
+/* NW corner - arrow pointing to NW (top-left) */
+.ui-resizable-nw::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 3px solid rgba(51, 51, 51, 0.6);
+  border-left: 3px solid rgba(51, 51, 51, 0.6);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: border-color 0.2s ease;
+}
+
+.ui-resizable-nw:hover::before {
+  border-top-color: rgba(51, 51, 51, 0.9);
+  border-left-color: rgba(51, 51, 51, 0.9);
+}
+
+/* NE corner - arrow pointing to NE (top-right) */
+.ui-resizable-ne::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 3px solid transparent;
+  border-left: 3px solid transparent;
+  border-top: 3px solid rgba(51, 51, 51, 0.6);
+  border-right: 3px solid rgba(51, 51, 51, 0.6);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: border-color 0.2s ease;
+}
+
+.ui-resizable-ne:hover::before {
+  border-top-color: rgba(51, 51, 51, 0.9);
+  border-right-color: rgba(51, 51, 51, 0.9);
+}
+
+/* SW corner - arrow pointing to SW (bottom-left) */
+.ui-resizable-sw::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid rgba(51, 51, 51, 0.6);
+  border-left: 3px solid rgba(51, 51, 51, 0.6);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: border-color 0.2s ease;
+}
+
+.ui-resizable-sw:hover::before {
+  border-bottom-color: rgba(51, 51, 51, 0.9);
+  border-left-color: rgba(51, 51, 51, 0.9);
+}
+
+/* SE corner - arrow pointing to SE (bottom-right) */
+.ui-resizable-se::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 3px solid transparent;
+  border-left: 3px solid transparent;
+  border-bottom: 3px solid rgba(51, 51, 51, 0.6);
+  border-right: 3px solid rgba(51, 51, 51, 0.6);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: border-color 0.2s ease;
+}
+
+.ui-resizable-se:hover::before {
+  border-bottom-color: rgba(51, 51, 51, 0.9);
+  border-right-color: rgba(51, 51, 51, 0.9);
+}
+
+/* Edge handles */
+.ui-resizable-n,
+.ui-resizable-s {
+  height: 3px !important;
+  width: calc(100% - 12px) !important;
+  left: 6px !important;
+}
+
+/* North edge - arrow up */
+.ui-resizable-n::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid rgba(51, 51, 51, 0.5);
+  border-top: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: border-color 0.2s ease;
+}
+
+.ui-resizable-n:hover::before {
+  border-bottom-color: rgba(51, 51, 51, 0.8);
+}
+
+/* South edge - arrow down */
+.ui-resizable-s::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid rgba(51, 51, 51, 0.5);
+  border-bottom: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: border-color 0.2s ease;
+}
+
+.ui-resizable-s:hover::before {
+  border-top-color: rgba(51, 51, 51, 0.8);
+}
+
+.ui-resizable-e,
+.ui-resizable-w {
+  width: 3px !important;
+  height: calc(100% - 12px) !important;
+  top: 6px !important;
+}
+
+/* East edge - arrow right */
+.ui-resizable-e::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid rgba(51, 51, 51, 0.5);
+  border-right: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: border-color 0.2s ease;
+}
+
+.ui-resizable-e:hover::before {
+  border-left-color: rgba(51, 51, 51, 0.8);
+}
+
+/* West edge - arrow left */
+.ui-resizable-w::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-right: 4px solid rgba(51, 51, 51, 0.5);
+  border-left: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: border-color 0.2s ease;
+}
+
+.ui-resizable-w:hover::before {
+  border-right-color: rgba(51, 51, 51, 0.8);
+}
+
+/* Show handles on hover */
+.canvas-element-container .ui-resizable-handle {
+  opacity: 0.7 !important;
+}
+
+.canvas-element-container:hover .ui-resizable-handle {
+  opacity: 0.9 !important;
+}
+
+.canvas-element-container.ui-resizable-resizing .ui-resizable-handle {
+  opacity: 1 !important;
+}
+
+/* Visual feedback during resize */
+.canvas-element-container.ui-resizing {
+  border: 2px dashed #fff8f1 !important;
+}
+
+.ui-dragging {
+  opacity: 1 !important;
+  transform: scale(1.05);
+}
+
+.ui-droppable-active {
+  background-color: rgba(255, 248, 241, 0.1);
+  border: 2px dashed #fff8f1;
+  transition: all 0.2s ease;
+}
+
+.ui-droppable-hover {
+  background-color: rgba(255, 248, 241, 0.2);
+  border-color: #fff8f1;
+  transform: scale(1.02);
+}
+
+/* Drag label styling */
+#drag-label {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Improved drag item hover effects */
+.drag-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+  cursor: move;
+}
+
+/* Better visual feedback for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .drag-item:active {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+}
